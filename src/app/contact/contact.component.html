@@ -1,0 +1,70 @@
+<div class="contact-form">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="div-form">
+      <label for="name" class="label-form">Nombre:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="input-form"
+        required
+        minlength="3"
+        #name="ngModel"
+        [(ngModel)]="contact.name"
+      />
+      <div *ngIf="name.invalid && name.touched">
+        <small *ngIf="name.errors?.['required']">El nombre es obligatorio.</small>
+        <small *ngIf="name.errors?.['minlength']">
+          El nombre debe tener al menos 3 caracteres.
+        </small>
+      </div>
+    </div>
+
+    <div class="div-form">
+      <label for="email" class="label-form">Correo Electrónico:</label>
+      <input
+  type="email"
+  id="email"
+  name="email"
+  class="input-form"
+  required
+  #email="ngModel"
+  [(ngModel)]="contact.email"
+/>
+<div *ngIf="email.invalid && (email.touched || email.dirty)">
+  <small *ngIf="email.errors?.['required']">El correo es obligatorio.</small>
+  <small *ngIf="email.errors?.['email']">El correo no es válido (debe incluir un @).</small>
+</div>
+
+    </div>
+
+    <div class="div-form">
+      <label for="message" class="label-form">Mensaje:</label>
+      <textarea
+        id="message"
+        name="message"
+        class="input-form"
+        required
+        minlength="10"
+        #message="ngModel"
+        [(ngModel)]="contact.message"
+      ></textarea>
+      <div *ngIf="message.invalid && message.touched">
+        <small *ngIf="message.errors?.['required']">El mensaje es obligatorio.</small>
+        <small *ngIf="message.errors?.['minlength']">
+          El mensaje debe tener al menos 10 caracteres.
+        </small>
+      </div>
+    </div>
+
+    <div class="actiondiv-form">
+      <button
+        type="submit"
+        class="button-form"
+        [disabled]="contactForm.invalid"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>

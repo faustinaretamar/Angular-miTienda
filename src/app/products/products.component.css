@@ -1,0 +1,137 @@
+.productpage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los productos */
+    align-items: flex-start; /* Alinea productos al inicio */
+    padding-left: 5%; /* Ajusta los márgenes */
+    padding-right: 5%;
+    padding-top: 20px;
+    background-color: white;
+    gap: 20px; /* Agregar espacio entre las tarjetas */
+}
+
+.title-page-products {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle-page-products {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.header-section {
+    padding-bottom: 50px;
+    padding: 10px;
+    background-color: #222222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-top: 30px;
+}
+
+.search-input {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #0bed74; /* Azul claro al hacer clic */
+    outline: none;
+    box-shadow: 0 0 5px rgba(97, 227, 147, 0.5);
+}
+
+.product-carousel {
+    padding: 30px;
+    background-color: white;
+}
+
+.custom-carousel .p-carousel-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+::ng-deep .p-carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card {
+    margin: 0 auto;
+}
+
+/* Indicadores del carrusel */
+::ng-deep .p-carousel-indicator {
+    background-color: rgba(0, 255, 0, 0.5); /* Verde translúcido */
+    width: 30px; /* Ancho */
+    height: 12px; /* Alto */
+    border-radius: 20%; /* Forma redondeada */
+    margin: 0 5px; /* Espaciado */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: -1; 
+}
+
+/* Indicador activo */
+::ng-deep .p-carousel-indicator.p-highlight {
+    background-color: rgba(8, 107, 59, 0.8); /* Color activo */
+    transform: scale(1.2); /* Agrandamiento */
+}
+
+/* Puntos en hover */
+::ng-deep .p-carousel-indicator:hover {
+    background-color: rgba(13, 194, 103, 0.7); /* Cambia de color al pasar el mouse */
+    cursor: pointer; /* Indica que es clickeable */
+}
+
+
+/* Botones de navegación del carrusel */
+::ng-deep .p-carousel-next-button,
+::ng-deep .p-carousel-prev-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(231, 239, 240, 0.842); /* Más translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+::ng-deep .p-carousel-next-button:hover,
+::ng-deep .p-carousel-prev-button:hover {
+    background-color: rgba(127, 140, 141, 0.8); /* Más opaco al pasar el mouse */
+}
+
+/* Iconos de navegación */
+::ng-deep .p-carousel .p-icon {
+    color: #04e26ce3; /* Color de la flechita */
+    width: 22px !important; /* Tamaño de la flechita */
+    height: 22px !important;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}

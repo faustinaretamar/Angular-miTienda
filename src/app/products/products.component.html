@@ -1,0 +1,36 @@
+<div class="header-section">
+  <h1 class="title-page-products">Descubre Nuestros Productos</h1>
+  <p class="subtitle-page-products">Encuentra las mejores ofertas y productos de calidad.</p>
+</div>
+
+<div class="search-container">
+  <input
+    type="text"
+    placeholder="Buscar productos..."
+    class="search-input"
+    (input)="onSearchChange($event)"
+  />
+</div>
+
+<section class="product-carousel">
+  <p-carousel 
+    *ngIf="filteredProducts.length > 0; else noProducts" 
+    [value]="filteredProducts" 
+    [numVisible]="3" 
+    [numScroll]="3" 
+    [responsiveOptions]="responsiveOptions"
+    [autoplayInterval]="8000" [circular]="true"
+    class="custom-carousel"
+  >
+    <ng-template pTemplate="item" let-product>
+      <app-product [product]="product"></app-product>
+    </ng-template>
+  </p-carousel>
+  
+  <ng-template #noProducts>
+    <p>No hay productos disponibles.</p>
+  </ng-template>
+</section>
+<section>
+  
+</section>

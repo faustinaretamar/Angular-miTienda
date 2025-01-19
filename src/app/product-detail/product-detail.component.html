@@ -1,0 +1,14 @@
+<div class="product-detail">
+    <div class="image-container">
+      <img [src]="product?.image" [alt]="product?.name" class="product-image" />
+    </div>
+    <div class="details-container">
+      <h1 class="product-title">{{ product?.name }}</h1>
+      <p class="product-price">${{ product?.price }}</p>
+      <!-- Cambié description a longDescription -->
+      <p class="product-description">{{ product?.longDescription }}</p>
+      <button class="add-to-cart" (click)="addToCart()">Agregar al carrito</button>
+      <button class="go-back" (click)="goBack()">Volver</button>
+    </div>
+  </div>
+  
