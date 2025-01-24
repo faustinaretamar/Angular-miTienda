@@ -23,18 +23,19 @@
     <div class="div-form">
       <label for="email" class="label-form">Correo Electrónico:</label>
       <input
-  type="email"
-  id="email"
-  name="email"
-  class="input-form"
-  required
-  #email="ngModel"
-  [(ngModel)]="contact.email"
-/>
-<div *ngIf="email.invalid && (email.touched || email.dirty)">
-  <small *ngIf="email.errors?.['required']">El correo es obligatorio.</small>
-  <small *ngIf="email.errors?.['email']">El correo no es válido (debe incluir un @).</small>
-</div>
+        type="email"
+        id="email"
+        name="email"
+        class="input-form"
+        required
+        #email="ngModel"
+        [(ngModel)]="contact.email"
+      />
+      <div *ngIf="email.invalid && email.touched">
+        <small *ngIf="email.errors?.['required']">El correo es obligatorio.</small>
+        <small *ngIf="email.errors?.['email']">El correo no es válido.</small>
+      </div>
+    </div>
 
     </div>
 
