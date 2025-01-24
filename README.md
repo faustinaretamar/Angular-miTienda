@@ -11,4 +11,4 @@ Este proyecto es una tienda electrónica creada con **Angular**. Incluye funcion
 ## Demo en vivo
 Puedes explorar la aplicación en el siguiente enlace:
 
-👉 [MiTienda - Angular Electronic](https://angularelectronic.netlify.app/products)
+👉 [MiTienda - Angular Electronic](https://angularelectronic.netlify.app)
